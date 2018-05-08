@@ -1,0 +1,6 @@
+framework module Pods_MartianNewsReader {
+  umbrella header "Pods-MartianNewsReader-umbrella.h"
+
+  export *
+  module * { export * }
+}

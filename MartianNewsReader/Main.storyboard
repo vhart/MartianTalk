@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LHL-xa-sdV">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="h3p-eQ-QWT">
+            <objects>
+                <navigationController id="LHL-xa-sdV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XFM-rt-Ugr">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="a7t-sR-fR8" kind="relationship" relationship="rootViewController" id="O2n-ka-nmk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="daP-pK-R8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-530" y="-349"/>
+        </scene>
+        <!--The Martian Times-->
+        <scene sceneID="vt2-DZ-vgI">
+            <objects>
+                <viewController id="a7t-sR-fR8" customClass="ArticleListViewController" customModule="MartianNewsReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wD3-L1-dfL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qH5-Wg-RW3">
+                                <rect key="frame" x="-4" y="72" width="383" height="29"/>
+                                <segments>
+                                    <segment title="English"/>
+                                    <segment title="Martian"/>
+                                </segments>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="languageSegmentChanged:" destination="a7t-sR-fR8" eventType="valueChanged" id="2YN-rJ-pxN"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p8l-cS-tGm">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="a7t-sR-fR8" id="KXH-cf-3Nx"/>
+                                    <outlet property="delegate" destination="a7t-sR-fR8" id="c2s-eu-5DL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="chd-iX-DGw" firstAttribute="trailing" secondItem="p8l-cS-tGm" secondAttribute="trailing" id="6bH-M5-cnk"/>
+                            <constraint firstItem="p8l-cS-tGm" firstAttribute="top" secondItem="qH5-Wg-RW3" secondAttribute="bottom" constant="8" id="94f-6g-zM9"/>
+                            <constraint firstItem="qH5-Wg-RW3" firstAttribute="leading" secondItem="chd-iX-DGw" secondAttribute="leading" constant="-4" id="avN-pu-oX6"/>
+                            <constraint firstItem="qH5-Wg-RW3" firstAttribute="top" secondItem="chd-iX-DGw" secondAttribute="top" constant="8" id="g5Y-pY-zgE"/>
+                            <constraint firstItem="chd-iX-DGw" firstAttribute="bottom" secondItem="p8l-cS-tGm" secondAttribute="bottom" id="mpw-Ff-Cc5"/>
+                            <constraint firstItem="chd-iX-DGw" firstAttribute="trailing" secondItem="qH5-Wg-RW3" secondAttribute="trailing" constant="-4" id="rPa-ph-qiB"/>
+                            <constraint firstItem="p8l-cS-tGm" firstAttribute="leading" secondItem="chd-iX-DGw" secondAttribute="leading" id="xVe-ot-8Gr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="chd-iX-DGw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="The Martian Times" id="JS9-zi-N1A"/>
+                    <connections>
+                        <outlet property="languageSegmentedControl" destination="qH5-Wg-RW3" id="2bu-XV-nZ9"/>
+                        <outlet property="tableView" destination="p8l-cS-tGm" id="D1X-v3-bR0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ruT-Ed-Dtt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="262" y="-348"/>
+        </scene>
+        <!--Article Detail View Controller-->
+        <scene sceneID="qEP-QE-bC4">
+            <objects>
+                <viewController storyboardIdentifier="ArticleDetailViewController" id="2Ae-2c-dce" customClass="ArticleDetailViewController" customModule="MartianNewsReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nff-PD-N8E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4Yg-fg-5ll">
+                                <rect key="frame" x="-4" y="28" width="383" height="29"/>
+                                <segments>
+                                    <segment title="English"/>
+                                    <segment title="Martian"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="languageSegmentChanged:" destination="2Ae-2c-dce" eventType="valueChanged" id="CVa-ho-JwS"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mdr-SP-aQZ">
+                                <rect key="frame" x="0.0" y="100.5" width="375" height="97"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWu-Q5-QXJ">
+                                <rect key="frame" x="8" y="72" width="359" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3QV-gR-ipo">
+                                <rect key="frame" x="0.0" y="197.5" width="375" height="469.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1cM-RL-XVb" firstAttribute="trailing" secondItem="WWu-Q5-QXJ" secondAttribute="trailing" constant="8" id="07P-Ab-Uag"/>
+                            <constraint firstItem="WWu-Q5-QXJ" firstAttribute="leading" secondItem="1cM-RL-XVb" secondAttribute="leading" constant="8" id="5Yr-24-mUK"/>
+                            <constraint firstItem="Mdr-SP-aQZ" firstAttribute="top" secondItem="WWu-Q5-QXJ" secondAttribute="bottom" constant="8" id="ARG-JL-ubG"/>
+                            <constraint firstItem="1cM-RL-XVb" firstAttribute="trailing" secondItem="3QV-gR-ipo" secondAttribute="trailing" id="IwH-Oj-hPV"/>
+                            <constraint firstItem="4Yg-fg-5ll" firstAttribute="leading" secondItem="1cM-RL-XVb" secondAttribute="leading" constant="-4" id="Lqn-RD-P8L"/>
+                            <constraint firstItem="WWu-Q5-QXJ" firstAttribute="top" secondItem="4Yg-fg-5ll" secondAttribute="bottom" constant="16" id="O4I-ul-u9a"/>
+                            <constraint firstItem="3QV-gR-ipo" firstAttribute="leading" secondItem="1cM-RL-XVb" secondAttribute="leading" id="VNw-bH-8VA"/>
+                            <constraint firstItem="1cM-RL-XVb" firstAttribute="bottom" secondItem="3QV-gR-ipo" secondAttribute="bottom" id="XD9-XU-fmk"/>
+                            <constraint firstItem="1cM-RL-XVb" firstAttribute="trailing" secondItem="Mdr-SP-aQZ" secondAttribute="trailing" id="Z2s-dA-r5c"/>
+                            <constraint firstItem="Mdr-SP-aQZ" firstAttribute="height" secondItem="1cM-RL-XVb" secondAttribute="height" multiplier="0.15" id="aiU-bU-z7y"/>
+                            <constraint firstItem="4Yg-fg-5ll" firstAttribute="top" secondItem="1cM-RL-XVb" secondAttribute="top" constant="8" id="bBN-iK-g4H"/>
+                            <constraint firstItem="3QV-gR-ipo" firstAttribute="top" secondItem="Mdr-SP-aQZ" secondAttribute="bottom" id="dX7-5f-iNi"/>
+                            <constraint firstItem="1cM-RL-XVb" firstAttribute="trailing" secondItem="4Yg-fg-5ll" secondAttribute="trailing" constant="-4" id="nHk-5L-laI"/>
+                            <constraint firstItem="Mdr-SP-aQZ" firstAttribute="leading" secondItem="1cM-RL-XVb" secondAttribute="leading" id="yKS-gi-OwT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1cM-RL-XVb"/>
+                    </view>
+                    <connections>
+                        <outlet property="bodyTextView" destination="3QV-gR-ipo" id="QWO-aA-fyZ"/>
+                        <outlet property="languageSegmentedController" destination="4Yg-fg-5ll" id="dKf-uR-NoI"/>
+                        <outlet property="titleLabel" destination="WWu-Q5-QXJ" id="ypZ-g0-o1B"/>
+                        <outlet property="topImageView" destination="Mdr-SP-aQZ" id="B7d-ue-J6U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EGA-F2-mLW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="958" y="-349"/>
+        </scene>
+    </scenes>
+</document>

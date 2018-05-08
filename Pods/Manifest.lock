@@ -1,0 +1,18 @@
+PODS:
+  - Nimble (7.0.3)
+  - Quick (1.2.0)
+  - RxSwift (4.1.2)
+
+DEPENDENCIES:
+  - Nimble (~> 7.0.2)
+  - Quick (~> 1.2.0)
+  - RxSwift (~> 4.0)
+
+SPEC CHECKSUMS:
+  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
+
+PODFILE CHECKSUM: 241c2e43a635f47b9d660103a5153682a17de1cc
+
+COCOAPODS: 1.1.1
