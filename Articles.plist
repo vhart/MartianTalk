@@ -79,7 +79,7 @@ Facebook also added two new underwriters, including online broker E*Trade Securi
 				<key>top_image</key>
 				<true/>
 				<key>url</key>
-				<string>http://mobile.public.ec2.nytimes.com.s3-website-us-east-1.amazonaws.com/candidates/images/img1.jpg</string>
+				<string>https://images.unsplash.com/photo-1524156868115-e696b44983db</string>
 				<key>width</key>
 				<integer>450</integer>
 			</dict>
@@ -123,7 +123,7 @@ His comments reminded me of a recent conversation I had when I was reporting on 
 				<key>top_image</key>
 				<true/>
 				<key>url</key>
-				<string>http://mobile.public.ec2.nytimes.com.s3-website-us-east-1.amazonaws.com/candidates/images/img2.jpg</string>
+				<string>https://images.unsplash.com/photo-1524641234638-4c303747c310?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9&s=06e88f84d2ceaf6cf381bc0287ffe00a</string>
 				<key>width</key>
 				<integer>600</integer>
 			</dict>
@@ -149,7 +149,7 @@ Luckily, the excitement of finding the skeleton was enough to keep us motivated 
 				<key>top_image</key>
 				<false/>
 				<key>url</key>
-				<string>http://mobile.public.ec2.nytimes.com.s3-website-us-east-1.amazonaws.com/candidates/images/img4.jpg</string>
+				<string>https://images.unsplash.com/photo-1495804308966-66b1283202af?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=179aad117d77fa6a15da2fbff67012f3&auto=format&fit=crop&w=2100&q=80</string>
 				<key>width</key>
 				<integer>190</integer>
 			</dict>
@@ -159,7 +159,7 @@ Luckily, the excitement of finding the skeleton was enough to keep us motivated 
 				<key>top_image</key>
 				<true/>
 				<key>url</key>
-				<string>http://mobile.public.ec2.nytimes.com.s3-website-us-east-1.amazonaws.com/candidates/images/img3.jpg</string>
+				<string>https://images.unsplash.com/photo-1525647809743-f047facf5d53?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9&s=eac74fb74ca3feda6281308e7deb296f</string>
 				<key>width</key>
 				<integer>480</integer>
 			</dict>
